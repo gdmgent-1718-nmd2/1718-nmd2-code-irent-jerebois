@@ -8,13 +8,14 @@
 // Color system
 //
 
-$indigo:  #6610f2;
-$primary: $indigo;
+$default:  #000;
+$primary: $default;
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Cookie');
 
-$font-family-base: Merriweather, serif;
+$font-family-base: Lato, serif;

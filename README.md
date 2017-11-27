@@ -35,4 +35,4 @@ PS> git submodule add --branch v4-dev --depth 1 https://github.com/twbs/bootstra
 
 ### Voorbeeldsite
 
-<http://www.gdm.gent/1718-nmd2-code-irent/>
+<https://gdmgent-1718-nmd2.github.io/1718-nmd2-code-irent-jerebois/>

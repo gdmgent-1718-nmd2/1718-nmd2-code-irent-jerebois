@@ -2,4 +2,19 @@
 	<nav>
 		<h1><a href="{{ site.baseurl }}{% link pages/index.html %}">Balloons in a Box</a></h1>
 	</nav>
+
+	<!-- Navigation pre-test -->
+	<!-- Filter pages for us in navigation -->
+	{% assign nodes = site.pages | where: 'nav', 'active' | sort: 'index' %}
+	<!-- Test to see if array get any results -->
+	<!--<pre>{{ nodes | inspect }}</pre>-->
+	<nav class="nav nav-pills">
+	    {% for node in nodes %}
+	        {% assign is_active = false %}
+	        {% if node.url == page.url %}
+	            {% assign is_active = true %}
+	        {% endif %}
+	    <a class="nav-link{% if is_active %} active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
+	    {% endfor %}
+	</nav>
 </header>
