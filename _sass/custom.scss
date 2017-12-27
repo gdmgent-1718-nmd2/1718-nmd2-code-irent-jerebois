@@ -1,0 +1,579 @@
+$background-default-color: #122631;
+$bg-svg-img-path: '../../assets/images/svg/';
+$bg-png-img-path: '../../assets/images/png/';
+
+body {
+	background-color: $background-default-color;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.row {
+    position: relative;
+}
+
+.navbar {
+    background: linear-gradient(top, rgba(18,38,49,0.8) 0%,rgba(18,38,49,0) 100%);
+    padding: 0.5rem 2.25rem;
+    @media (max-width: 575px) {
+        padding: 0.50rem 1.75rem;        
+    }
+}
+
+a.navbar-brand {
+    text-align: left;
+    height: 6vh;
+    width: 195px;
+    text-indent: -9999px;
+    -webkit-mask: url('#{$bg-svg-img-path}balloon_typeLogo.svg') center no-repeat;
+    mask: url('#{$bg-svg-img-path}balloon_typeLogo.svg') no-repeat;
+    background-color: white;
+    margin: 0rem;
+
+    &:hover {
+        //background-color: #F5B5B3;
+        background: -webkit-linear-gradient(top, #fbeacc 50%,#f2c9c9 100%);
+    }
+
+    @media (max-width: 575px) {
+        width: 165px;   
+    }    
+}
+
+/*overlay*/
+.overlay {
+    overflow: auto;
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: $background-default-color;
+    z-index: 99;
+}
+
+.wrap {
+    text-align: center;
+
+    ul.wrap-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 100vh;
+        padding: 0;
+
+        li {
+            a {
+                display:block;
+                padding:8px 0;
+                text-decoration:none;
+                transition-property:all .2s linear 0s;
+                transition:all .2s linear 0s;
+
+                &:hover {
+                    color:#F5B5B3;
+                }
+            }            
+        }
+        ul {
+            padding:20px 0;
+            li {
+                display:block;
+                font-size:24px;
+                width:100%;
+
+                a {
+                    color:#fff;
+                    position: relative;                  
+                    &:hover {
+                        color:#F5B5B3;
+                        &:before,
+                        &:after {
+                            content: '';
+                            background: #CCC;
+                            width: 6em;
+                            display: block;
+                            position: absolute;
+                            height: 2px;
+                            top: 1.0em;
+                        }                        
+                    }
+                    &:before {
+                        left: -100%;
+                    }
+                    &:after {
+                        right: -100%;
+                    }
+                }                
+            }            
+        }        
+    }
+}
+
+.active {
+    color: #FBEACC !important;
+    &:before,
+    &:after {
+        content: '';
+        background: #c1b59e;
+        width: 6em;
+        display: block;
+        position: absolute;
+        height: 2px;
+        top: 1.0em;
+    }
+    &:before {
+        left: -10em;
+    }
+    &:after {
+        right: -10em;
+    }         
+}
+
+.nav_circle {
+    color: #fff;
+    width: 2rem;
+    border: 0.25rem solid #fff;
+    height: 2rem;
+    border-radius: 50%;
+    bottom: 7.5rem;
+    left: 50%;
+    margin-left: -1rem;
+    position: absolute;
+    background: $background-default-color;
+    z-index: 1;
+}
+
+.nav_stripe {
+    border-left: 5px solid white;
+    height: 15vh;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    bottom: 0em;        
+}
+
+.jumbotron {
+    border-radius: 0px; 
+    width: 100%;
+    height: 100vh;
+    max-height: 100vw;
+    background: url('#{$bg-png-img-path}BB_skyline.png') center center no-repeat;
+    background-size: 115vw;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    @media (max-width: 1199px) { 
+        max-height: 200vw;
+        background-size: 200vw;
+    }
+
+    @media (max-width: 991px) {
+        max-height: 200vw;
+        background-size: 225vw;
+    }
+
+    @media (max-width: 575px) {
+        max-height: 300vw;
+        background-size: 335vw;
+    }
+
+    div {
+        position: absolute;
+        font-size: 24px;
+        bottom: 2rem;
+        color: white;
+
+        a {
+            color: #fff;
+            text-decoration: none;           
+        }       
+    }
+
+    .nav_arrow {
+        border: solid white;
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        padding: 20px;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 50%;
+        margin-left: -22px;
+
+        @media (max-width: 736px) {
+            margin-left: -22px;
+        }        
+    }
+
+    .nav_stripe {
+        border-left: 5px solid #fff;
+        height: 25%;
+        bottom: 0rem;
+        margin-left: -2px;
+
+        @media (max-width: 991px) {
+            margin-left: -2px;
+            border-left: 3px solid #fff;
+            height: 23%
+        }
+
+        @media (max-width: 736px) {
+            border-left: 2px solid #fff;
+
+        }
+
+        @media (max-width: 575px) {
+            border-left: 2px solid white;
+            margin-left: -1px;
+            height: 32%;
+        }                
+    }
+    .nav_circle {
+        color: #fff;
+        width: 1.5rem;
+        border: 0.25rem solid #fff;
+        height: 1.5rem;
+        bottom: 4rem;
+        margin-left: -0.75rem;
+        background: #fff;
+    }      
+}
+
+.reserve-cta {
+    display: block;
+    left: 1.75rem;
+
+    a {
+        display: inline-block;
+    }
+
+    @media (max-width: 575px) {
+        width: 150px;
+
+        a:nth-child(1) {
+            font-size: 15px;
+        }
+    }    
+}
+
+a.logo {
+    text-align: center;
+    height: 100%;
+    max-width: 650px;
+    width: 100%;
+    text-indent: -9999px;
+    mask: url('#{$bg-svg-img-path}balloon_logo.svg') center no-repeat;
+    background-color: white;
+    display: block;
+    margin: auto;
+
+    &:hover {
+        background: -webkit-linear-gradient(top, #fbeacc 50%,#f2c9c9 100%);
+        box-shadow: inset 0px 0px 165px 20px rgba(255,255,255,1);
+    }
+}
+
+.nav_line {
+    border-left: 5px solid white;
+    height: 325vh;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    top: 90%;
+
+    @media (max-width: 1199px) {
+        top: 70%;
+    }
+
+    @media (max-width: 991px) { 
+        top: 75%;
+    }
+
+    @media (max-width: 736px) {
+        border-left: 3px solid white;
+        height: 325vh;
+        margin-left: -2px;
+        top: 72%;
+    }
+
+    @media (max-width: 575px) {
+        border-left: 2px solid white;
+        margin-left: -1px;
+    }    
+
+}
+
+.blockquote {
+    color: #fff;
+    font-size: 2.25rem;
+    display: flex;
+    height: 100%;
+
+    .quote {
+        padding: 8px;
+        background-image: url('#{$bg-png-img-path}openquote.png');
+        background-size: 12%;
+        background-position: top left;
+        background-repeat: no-repeat;
+        text-indent: 5%;
+    }
+
+    span {
+        display: block;
+        background-image: url('#{$bg-png-img-path}closequote.png');
+        background-size: 12%;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        font-style: italic;
+        padding: 8% 4%;
+    }
+
+    div {
+        width: 100%;
+    }
+
+    div > p {
+        right: 1.5rem;
+        padding: 0;
+        position: absolute;
+        min-width: 85px;
+    }
+    @media (max-width: 991px) { 
+        font-size: 1.5rem;
+    }
+    @media (max-width: 736px) {
+        font-size: 1.3rem;
+    }     
+    @media (max-width: 575px) {
+        font-size: 1rem;
+    }
+}
+
+.card-right {
+    background: url('#{$bg-svg-img-path}prompt_right.svg') no-repeat;
+
+    .flex-fix {
+        width: 60%;
+        margin-left: 5%;        
+    }      
+}
+
+.card-left {
+    background: url('#{$bg-svg-img-path}prompt_left.svg') no-repeat;
+
+    .flex-fix {
+        width: 80%;
+        margin-right: 8%;        
+    }
+}
+
+.container-box {
+    max-width: 1920px;
+}
+
+.card-top {
+    background: url('#{$bg-svg-img-path}prompt_top.svg') no-repeat;
+    display: flex;
+    flex-direction: column;    
+
+    // Fix for bug in Firefox that doesn't like %'s for top and bottom margin/padding (really annoying)
+    .flex-fix {
+        width: 40%;        
+    }
+
+    .flex-fix > img {
+        padding-top: 20% !important;
+        min-height: 100px;
+    }
+}
+
+.card-video {
+    border: solid 0.5rem white; 
+    padding: 10% 4% 0% 4%;
+    background: url('#{$bg-svg-img-path}prompt_video.svg') no-repeat;
+    display: flex;
+    flex-direction: column;    
+
+    // Fix for bug in Firefox that doesn't like %'s for top and bottom margin/padding (really annoying)
+    video {
+        border: solid 1px #b0b0b0;
+        //outline: 2px solid red;
+        //outline-offset: 15px;
+    }
+
+    @media (max-width: 991px) {
+        padding: 9% 3% 1% 3%;
+    }
+
+    @media (max-width: 736px) {
+        padding: 9% 3% 1% 3%;
+    }
+
+    @media (max-width: 575px) {
+        padding: 8% 2% 2% 2%;
+    }                
+}
+
+.margin-offset-top {
+    margin-top: -7%;
+}
+
+.card {
+    position: relative;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    a {
+        color: #fff;      
+    }
+
+    img {
+        cursor: pointer;
+        display: block;
+        vertical-align: middle;
+        position: relative;              
+    }
+
+    .flex-fix > img {
+        margin: auto;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        
+        @media (max-width: 575px) {
+            padding-top: 20%;
+            padding-bottom: 20%;
+        }
+    }
+}
+
+.circle_mark {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border: 0.25rem solid white;
+    border-radius: 50%;
+    background-color: $background-default-color;
+
+    @media (max-width: 991px) {
+        width: 1.5rem;
+        height: 1.5rem;        
+    }
+
+    @media (max-width: 736px) {
+        width:  1.25rem;
+        height: 1.25rem;        
+    }
+
+    @media (max-width: 575px) {
+        width: 1rem;
+        height: 1rem;
+        border: 0.15rem solid white;
+    } 
+}
+
+.box1 .circle_mark {
+    top: -1%;
+    @media (max-width: 991px) {       
+        top: -2%;
+    }
+
+    @media (max-width: 736px) {      
+        top: -3%;
+    }
+
+    @media (max-width: 575px) {
+        top: -2%;
+    }     
+}
+
+.box2 .circle_mark {
+    top: 61%;
+    @media (max-width: 991px) {       
+        top: 60%;
+    }
+
+    @media (max-width: 736px) {      
+        top: 61%;
+    }
+
+    @media (max-width: 575px) {
+        top: 60%;
+    }     
+}
+
+.box3 .circle_mark {
+    top: 40%;
+    @media (max-width: 991px) {       
+        top: 41%;
+    }
+
+    @media (max-width: 736px) {      
+        top: 40%;
+    }
+
+    @media (max-width: 575px) {
+        top: 40%;
+    }     
+}
+
+.box4 .circle_mark {
+    top: -1%;
+    @media (max-width: 991px) {       
+        top: -3%;
+    }
+
+    @media (max-width: 736px) {      
+        top: -2%;
+    }
+
+    @media (max-width: 575px) {
+        top: -3%;
+    }     
+}
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 0;
+    border-top: 4px solid rgba(255, 255, 255, 0.1);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+footer {
+    color: white;
+    background-color: $background-default-color;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 5vh;
+
+    .row {
+        margin: 0;
+    }
+
+    .contact {
+        font-size: 1.5rem;
+        font-weight: 100;
+        margin-top: 2rem;
+        margin-bottom: 2rem;        
+    }
+
+    .social {
+        margin-bottom: 0.5rem;
+
+        a {
+            padding: 0.5rem;
+            margin: 0rem 0.55rem;
+        }
+    }
+}

@@ -8,8 +8,11 @@
 // Color system
 //
 
-$default:  #000;
+$default:  #fff;
+$default-background: transparent;
 $primary: $default;
+$secondary: $default;
+$headings-color: $default;
 
 // Fonts
 //
@@ -19,3 +22,14 @@ $primary: $default;
 @import url('https://fonts.googleapis.com/css?family=Cookie');
 
 $font-family-base: Lato, serif;
+$light: rgba(255, 255, 255, 0);
+
+$input-border-radius: none;
+$input-bg: $default-background;
+
+$list-group-bg: $default-background;
+$list-group-border-color: none;
+$list-group-border-width: 0px;
+$list-group-border-radius: 0px;
+$list-group-item-padding-y: 0.05rem;
+$list-group-item-padding-x: 0.25rem;

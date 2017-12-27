@@ -2,13 +2,4 @@
 ---
 @charset "UTF-8";
 
-body {
-	background-color: #122631;
-}
-
-header {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
+@import "custom";

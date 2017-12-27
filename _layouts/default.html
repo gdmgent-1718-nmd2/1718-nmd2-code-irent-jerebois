@@ -7,19 +7,23 @@
     <!-- Bootstrap default -->
     <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/app.scss %}">
     <!-- Custom SASS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/custom.scss %}">    
+    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/custom.scss %}">
+    <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/buttons.scss %}">
 </head>
 <body>
 <!-- Header -->	
 {% include header.html %}
 
-<!-- Content -->		
-{{ content }}
+<!-- Content -->
+<!--<div class="container">-->
+	{{ content }}
+<!--</div>-->		
 
 <!-- Footer -->	
 {% include footer.html %}
 
 <!-- Scripts -->	
 {% include scripts-bottom.html %}
+<script src="{{ site.baseurl }}{% link assets/js/custom.js %}"></script>
 </body>
 </html>

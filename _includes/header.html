@@ -1,20 +1,29 @@
-<header class="navbar fixed-top navbar-light bg-light">
-	<nav>
-		<h1><a href="{{ site.baseurl }}{% link pages/index.html %}">Balloons in a Box</a></h1>
-	</nav>
-
-	<!-- Navigation pre-test -->
-	<!-- Filter pages for us in navigation -->
-	{% assign nodes = site.pages | where: 'nav', 'active' | sort: 'index' %}
-	<!-- Test to see if array get any results -->
-	<!--<pre>{{ nodes | inspect }}</pre>-->
-	<nav class="nav nav-pills">
-	    {% for node in nodes %}
-	        {% assign is_active = false %}
-	        {% if node.url == page.url %}
-	            {% assign is_active = true %}
-	        {% endif %}
-	    <a class="nav-link{% if is_active %} active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title }}</a>
-	    {% endfor %}
+<header>
+	<nav class="navbar fixed-top">
+		<a class='navbar-brand' href='{{ site.baseurl }}{% link pages/index.html %}'>Balloons in a Box</a>
+		<div class="button">
+			<a class="btn-open" href="#"></a>
+		</div>
 	</nav>
 </header>
+
+<div class="overlay">
+	<div class="wrap justify-content-center">
+		<ul class="wrap-nav">
+			<li>
+				{% assign nodes = site.pages | where: 'nav', 'active' | sort: 'index' %}
+				<ul class="">
+					{% for node in nodes %}
+		        	{% assign is_active = nil %}
+		        	{% if node.url contains page.url %}
+		            {% assign is_active = 'active' %}
+		        	{% endif %}        	
+		    		<li><a class="{{is_active}}" href="{{ node.url | relative_url }}">{{ node.title | upcase }}</a></li>
+		    		{% endfor %}
+				</ul>
+			</li>
+		</ul>
+		<div class="nav_circle"></div>
+		<div class="nav_stripe"></div>	
+	</div>
+</div>

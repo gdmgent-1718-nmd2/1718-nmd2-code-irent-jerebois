@@ -1,0 +1,118 @@
+/*styling header open close button*/
+$button-path: '../../assets/images/svg/buttons/';
+$button-svg-color: #fff;
+$button-svg-hover: #F5B5B3;
+
+.button {
+    display:inline;
+    top:6px;
+    z-index:999;
+    font-size:50px;
+}
+.button a {
+    text-decoration:none;
+}
+.btn-open {
+
+    &:after {
+        content: 'menu';
+        text-indent: -9999px;
+        mask: url('#{$button-path}ic_menu_black.svg') center no-repeat;
+        background-color: $button-svg-color;
+        display: inline-block;
+        width: 75px;
+        transition-property: all .2s linear 0s;
+    }
+
+    &:hover:after {
+        background-color: $button-svg-hover;
+    }
+}
+
+.btn-close {
+
+    &:after {
+        content:"close";
+        text-indent: -9999px;
+        mask: url('#{$button-path}ic_close_black.svg') center no-repeat;
+        background-color: $button-svg-color;
+        display: inline-block;
+        width: 75px;
+        transition-property:all .2s linear 0s;
+    }
+
+    &:hover:after {
+        background-color: $button-svg-hover;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    background-color: white;
+    max-width: 50px;
+    text-indent: -9999px; 
+}
+
+.control-panel {
+    width: 100%;
+    padding: 4% 8%;
+
+    @media (max-width: 991px) {
+        padding: 2% 5%;
+    }  
+    
+    @media (max-width: 736px) {
+        padding: 2% 5%;
+    }
+
+    @media (max-width: 575px) {
+        padding: 1% 8%;
+        max-height: 33px;
+
+        .btn-icon {
+            max-width: 20px;
+            max-height: 20px;            
+        }
+    }             
+}
+
+.btn-play {
+    mask: url('../../assets/images/svg/buttons/ic_play_arrow_black.svg') center no-repeat;
+}
+
+.btn-rw {
+    mask: url('../../assets/images/svg/buttons/ic_fast_rewind_black.svg') center no-repeat;  
+}
+
+.btn-fw {
+    mask: url('../../assets/images/svg/buttons/ic_fast_forward_black.svg') center no-repeat;   
+}
+
+.btn-mute {
+    mask: url('../../assets/images/svg/buttons/ic_volume_off_black.svg') center no-repeat;      
+}
+
+.btn-cast {
+    mask: url('../../assets/images/svg/buttons/ic_cast_black.svg') center no-repeat; 
+}
+
+.play-active {
+    mask: url('../../assets/images/svg/buttons/ic_pause_black.svg') center no-repeat;  
+}
+
+.mute-active {
+    mask: url('../../assets/images/svg/buttons/ic_volume_up_black.svg') center no-repeat;
+}
+
+.svg-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.facebook {
+    mask: url('../../assets/images/sprites/fb.svg') center no-repeat;
+}
+
+.instagram {
+    mask: url('../../assets/images/sprites/in.svg') center no-repeat;
+}

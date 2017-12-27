@@ -1,5 +1,30 @@
-<nav class="navbar fixed-bottom navbar-light bg-light">
-{%- if site.show-style-guide %}
-    <a href="{{ site.baseurl }}{% link style-guide/index.md %}" class="btn">Style Guide</a>
-{%- endif %}
-</nav>
+<footer class="text-center">
+	<hr>
+	<h3>Sign Up!</h3>
+	<div class="row justify-content-center">
+		<div class="input-group col-lg-6 col-md-8 col-sm-12">
+			<input type="email" class="form-control" id="footerEmail" aria-describedby="emailHelp" placeholder="Your Email">
+			<span class="input-group-addon">
+	    		<button class="btn btn-secondary" type="button">Send</button>
+	  		</span>
+		</div>		
+	</div>
+	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+	<div class="contact">
+		<ul class="list-group">
+			<h3>Contact</h3>
+			<li class="list-group-item text-muted">1633 S Michigan Ave</li>
+			<li class="list-group-item text-muted">Chicago, IL 60616</li>
+			<li class="list-group-item text-muted">United States</li>
+			<br>
+			<li class="list-group-item"><a href="mailto:info@balloonsiabox.com">info@balloonsiabox.com</a></li>
+			<li class="list-group-item"><a href="tel:0013123743203">+1 312 374 3203</a></li>
+		</ul>
+	</div>
+	<div class="social">
+		<a href="https://facebook.com" class="btn btn-secondary svg-icon facebook">Facebook</a>
+		<a href="https://instagram.com" class="btn btn-secondary svg-icon instagram">Instagram</a>
+	</div>
+	<div class="copyright">&copy; All the rights are reserved - Credits</div>
+</footer>
