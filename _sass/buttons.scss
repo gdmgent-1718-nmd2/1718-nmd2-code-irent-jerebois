@@ -97,34 +97,42 @@ $btn-bg-default-color: #122631;
 
 .btn-play {
     mask: url('../../assets/images/svg/buttons/ic_play_arrow_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_play_arrow_black.svg') center no-repeat;
 }
 
 .btn-rw {
-    mask: url('../../assets/images/svg/buttons/ic_fast_rewind_black.svg') center no-repeat;  
+    mask: url('../../assets/images/svg/buttons/ic_fast_rewind_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_fast_rewind_black.svg') center no-repeat;
 }
 
 .btn-fw {
-    mask: url('../../assets/images/svg/buttons/ic_fast_forward_black.svg') center no-repeat;   
+    mask: url('../../assets/images/svg/buttons/ic_fast_forward_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_fast_forward_black.svg') center no-repeat;   
 }
 
 .btn-mute {
-    mask: url('../../assets/images/svg/buttons/ic_volume_off_black.svg') center no-repeat;      
+    mask: url('../../assets/images/svg/buttons/ic_volume_off_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_volume_off_black.svg') center no-repeat;     
 }
 
 .btn-cast {
-    mask: url('../../assets/images/svg/buttons/ic_cast_black.svg') center no-repeat; 
+    mask: url('../../assets/images/svg/buttons/ic_cast_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_cast_black.svg') center no-repeat;
 }
 
 .play-active {
-    mask: url('../../assets/images/svg/buttons/ic_pause_black.svg') center no-repeat;  
+    mask: url('../../assets/images/svg/buttons/ic_pause_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_pause_black.svg') center no-repeat;
 }
 
 .mute-active {
     mask: url('../../assets/images/svg/buttons/ic_volume_up_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_volume_up_black.svg') center no-repeat;
 }
 
 .btn-send {
     mask: url('../../assets/images/svg/buttons/ic_send_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_send_black.svg') center no-repeat;
 }
 
 .svg-icon {
@@ -134,40 +142,48 @@ $btn-bg-default-color: #122631;
 
 .facebook {
     mask: url('../../assets/images/sprites/fb.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/sprites/fb.svg') center no-repeat;
 }
 
 .instagram {
     mask: url('../../assets/images/sprites/in.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/sprites/in.svg') center no-repeat;
 }
 
 
 .btn-edit {
     mask: url('../../assets/images/svg/buttons/ic_create_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_create_black.svg') center no-repeat;
 }
 
 .btn-add {
     mask: url('../../assets/images/svg/buttons/add_circle_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/add_circle_black.svg') center no-repeat;
 }
 
 .btn-clear {
     mask: url('../../assets/images/svg/buttons/ic_clear_black.svg') center no-repeat;
+    -webkit-mask: url('../../assets/images/svg/buttons/ic_clear_black.svg') center no-repeat;
 }
 
 .btn-arrow-r {
     span {
         mask: url('../../assets/images/svg/buttons/ic_arrow_right_black.svg') center no-repeat;
+        -webkit-mask: url('../../assets/images/svg/buttons/ic_arrow_right_black.svg') center no-repeat;
     }
 }
 
 .btn-arrow-l {
     span {    
         mask: url('../../assets/images/svg/buttons/ic_arrow_left_black.svg') center no-repeat;
+        -webkit-mask: url('../../assets/images/svg/buttons/ic_arrow_left_black.svg') center no-repeat;
     }    
 }
 
 .btn-arrow-d {
     span {    
         mask: url('../../assets/images/svg/buttons/ic_arrow_down_black.svg') center no-repeat;
+        -webkit-mask: url('../../assets/images/svg/buttons/ic_arrow_down_black.svg') center no-repeat;
     }    
 }
 
@@ -183,8 +199,10 @@ $btn-bg-default-color: #122631;
   height: $height;
   
   @if $direction == "up" {
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
   }  @else if $direction == "down" {
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
   
@@ -204,27 +222,25 @@ $btn-bg-default-color: #122631;
     position: absolute;
       left: 0;
       right: 0;
+    -webkit-transition: all 1s;
     transition: all 1s;
     height: $height/2;
   }
   
 
-  &::before { 
-    box-shadow: 
-      -4px 1px 0 $shadow,
-      -4px -3px 0 $shadow,
-      4px -3px 0 $shadow,
-      4px 2px 0 $shadow;
+  &::before {
+    -webkit-box-shadow: -4px 1px 0 $shadow, -4px -3px 0 $shadow, 4px -3px 0 $shadow, 4px 2px 0 $shadow;
+    box-shadow: -4px 1px 0 $shadow, -4px -3px 0 $shadow, 4px -3px 0 $shadow, 4px 2px 0 $shadow;
+    -webkit-transform: skew(45deg);
     transform: skew(45deg);
     @if $direction == "left" { bottom: 0; z-index: 1 }
     @else { top: 0; }
   }
 
   &::after {
-    box-shadow: -4px 0px 0 $shadow, 
-      6px 3px 0 $shadow,
-      -4px 3px 0 $shadow, 
-      6px 1px 0 $shadow;
+    -webkit-box-shadow: -4px 0px 0 $shadow, 6px 3px 0 $shadow,-4px 3px 0 $shadow, 6px 1px 0 $shadow;
+    box-shadow: -4px 0px 0 $shadow, 6px 3px 0 $shadow,-4px 3px 0 $shadow, 6px 1px 0 $shadow;
+    -webkit-transform: skew(-45deg);   
     transform: skew(-45deg);
     @if $direction == "left" { top: 0;}
     @else { bottom: 0; }
@@ -255,13 +271,25 @@ $btn-bg-default-color: #122631;
 /* Animations */
 
 @keyframes zoom {
-    25% {transform: scale3d(1.5,1.5,0);}
-    50% {transform: scale3d(1,1,0);}
-    75% {transform: scale3d(1.25, 1.25, 0);}
+    25% {
+        transform: scale3d(1.5,1.5,0);
+        -webkit-transform: scale3d(1.5,1.5,0);
+    }
+    50% {
+        transform: scale3d(1,1,0);
+        -webkit-transform: scale3d(1,1,0);
+    }
+    75% {
+        transform: scale3d(1.25, 1.25, 0);
+        -webkit-transform: scale3d(1.25, 1.25, 0);
+    }
 }
 
 @keyframes spin {
-    100% {transform: rotate(360deg);}
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes pulse {
@@ -294,83 +322,100 @@ $btn-bg-default-color: #122631;
 @keyframes breathing {
   0% {
     transform: scale(0.8) rotate(45deg);
+    -webkit-transform: scale(0.8) rotate(45deg);
   }
 
   35% {
     transform: scale(1) rotate(45deg);
+    -webkit-transform: scale(1) rotate(45deg);
   }
 
   65% {
     transform: scale(0.9) rotate(45deg);
+    -webkit-transform: scale(0.9) rotate(45deg);
   }
 
   100% {
     transform: scale(0.8) rotate(45deg);
+    -webkit-transform: scale(0.8) rotate(45deg);
   }
 }
 
 @keyframes bounceIn {
     from, 20%, 40%, 60%, 80%, to {
         animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
     }
 
     0% {
         opacity: 0;
         transform: scale3d(.3, .3, .3);
+        -webkit-transform: scale3d(.3, .3, .3);
     }
 
     20% {
         transform: scale3d(1.1, 1.1, 1.1);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
     }
 
     40% {
         transform: scale3d(.9, .9, .9);
+        -webkit-transform: scale3d(.9, .9, .9);
     }
 
     60% {
         opacity: 1;
         transform: scale3d(1.03, 1.03, 1.03);
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
     }
 
     80% {
         transform: scale3d(.97, .97, .97);
+        -webkit-transform: scale3d(.97, .97, .97);
     }
 
     to {
         opacity: 1;
         transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
     }
 }
 
 @keyframes slideInDown {
   from {
     transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
     visibility: visible;
   }
 
   to {
     transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes slideInDown_line {
   from {
-    transform: translate3d(0, -30%, 0); 
+    transform: translate3d(0, -30%, 0);
+    -webkit-transform: translate3d(0, -30%, 0);
     visibility: visible;
   }
 
   to {
     transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes slideInDown_line-fix {
   from {
-    transform: translate3d(0, -40%, 0); 
+    transform: translate3d(0, -40%, 0);
+    -webkit-transform: translate3d(0, -40%, 0);
     visibility: visible;
   }
 
   to {
     transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }

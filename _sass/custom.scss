@@ -16,7 +16,7 @@ ul {
 }
 
 .navbar {
-    background: linear-gradient(top, rgba(18,38,49,0.8) 0%,rgba(18,38,49,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(18,38,49,0.8) 0%,rgba(18,38,49,0) 100%), linear-gradient(top, rgba(18,38,49,0.8) 0%,rgba(18,38,49,0) 100%);
     padding: 0.5rem 2.25rem;
     @media (max-width: 575px) {
         padding: 0.50rem 1.75rem;        
@@ -32,16 +32,20 @@ a.navbar-brand {
     mask: url('#{$bg-svg-img-path}balloon_typeLogo.svg') no-repeat;
     background-color: white;
     margin: 0rem;
+    animation: bounceIn 1s;
+    -webkit-animation: bounceIn 1s;
 
     &:hover {
         //background-color: #F5B5B3;
-        background: -webkit-linear-gradient(top, #fbeacc 50%,#f2c9c9 100%);
+        background: -webkit-linear-gradient(top, #fbeacc 50%,#f2c9c9 100%), linear-gradient(top, #fbeacc 50%,#f2c9c9 100%);
         animation: bounceIn 1s;
+        -webkit-animation: bounceIn 1s;
     }
 
      &:active {
         //background-color: #F5B5B3;
         animation: bounceIn 1s;
+        -webkit-animation: bounceIn 1s;
     }   
 
     @media (max-width: 575px) {
@@ -79,7 +83,9 @@ a.navbar-brand {
                 padding:8px 0;
                 text-decoration:none;
                 transition-property:all .2s linear 0s;
+                -webkit-transition-property:all .2s linear 0s;
                 transition:all .2s linear 0s;
+                -webkit-transition:all .2s linear 0s;
 
                 &:hover {
                     color:#F5B5B3;
@@ -102,7 +108,7 @@ a.navbar-brand {
                         &:after {
                             content: '';
                             background: #CCC;
-                            width: 6em;
+                            width: 5em;
                             display: block;
                             position: absolute;
                             height: 2px;
@@ -127,7 +133,7 @@ a.navbar-brand {
     &:after {
         content: '';
         background: #c1b59e;
-        width: 6em;
+        width: 5em;
         display: block;
         position: absolute;
         height: 2px;
@@ -212,11 +218,13 @@ a.navbar-brand {
 
     .nav_arrow {
         animation: breathing 7s ease-out infinite normal;
+        -webkit-animation: breathing 7s ease-out infinite normal;
         border: solid white;
         border-width: 0 5px 5px 0;
         display: inline-block;
         padding: 20px;
         transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
         position: absolute;
         left: 50%;
         margin-left: -22px;
@@ -261,6 +269,7 @@ a.navbar-brand {
         margin-left: -0.75rem;
         background: #fff;
         animation: breathing 7s ease-out infinite normal;
+        -webkit-animation: breathing 7s ease-out infinite normal;
     }      
 }
 
@@ -277,6 +286,7 @@ a.navbar-brand {
     a:nth-child(2) {
         border-bottom: 2px solid;
         animation: eyecatcher 4s ease infinite;
+        -webkit-animation: eyecatcher 4s ease infinite;
     }
 
     @media (max-width: 575px) {
@@ -295,15 +305,18 @@ a.logo {
     width: 100%;
     text-indent: -9999px;
     mask: url('#{$bg-svg-img-path}balloon_logo.svg') center no-repeat;
+    -webkit-mask: url('#{$bg-svg-img-path}balloon_logo.svg') center no-repeat;
     backface-visibility: visible;
     background-color: white;
     display: block;
     margin: auto;
     animation: slideInDown 2s ease-out 0s 1;
+    -webkit-animation: slideInDown 2s ease-out 0s 1;
 
     &:hover {
-        background: -webkit-linear-gradient(top, #fbeacc 50%,#f2c9c9 100%);
+        background: -webkit-linear-gradient(top, #fbeacc 50%,#f2c9c9 100%), linear-gradient(top, #fbeacc 50%,#f2c9c9 100%);
         box-shadow: inset 0px 0px 165px 20px rgba(255,255,255,1);
+        -webkit-box-shadow: inset 0px 0px 165px 20px rgba(255,255,255,1);
     }
 }
 
@@ -315,21 +328,25 @@ a.logo {
     margin-left: -2px;
     top: 90%;
     animation: slideInDown_line 2.5s ease-out 0s 1;
+    -webkit-animation: slideInDown_line 2.5s ease-out 0s 1;
 
     @media (max-width: 1199px) {
         animation: slideInDown_line-fix 1.95s ease-out 0s 1;
+        -webkit-animation: slideInDown_line-fix 1.95s ease-out 0s 1;
         top: 70%;
         height: 250vh;
     }
 
     @media (max-width: 991px) { 
         animation: slideInDown_line 2.1s ease-out 0s 1;
+        -webkit-animation: slideInDown_line 2.1s ease-out 0s 1;
         top: 75%;
         height: 275vh;
     }
 
     @media (max-width: 736px) {
         animation: slideInDown_line 2.3s ease-out 0s 1;
+        -webkit-animation: slideInDown_line 2.3s ease-out 0s 1;
         border-left: 3px solid white;
         height: 325vh;
         margin-left: -2px;
@@ -338,6 +355,7 @@ a.logo {
 
     @media (max-width: 575px) {
         animation: slideInDown_line 2.0s ease-out 0s 1;
+        -webkit-animation: slideInDown_line 2.0s ease-out 0s 1;
         border-left: 2px solid white;
         margin-left: -1px;
         height: 300vh;
@@ -345,6 +363,7 @@ a.logo {
 
     @media (max-width: 375px) {
         animation: slideInDown_line 2.0s ease-out 0s 1;
+        -webkit-animation: slideInDown_line 2.0s ease-out 0s 1;
         border-left: 3px solid white;
         margin-left: -2px;
         height: 325vh;
@@ -641,9 +660,10 @@ hr {
 .base-hero-top {
     border-bottom: 4px solid;
     padding-top: 8rem;
-    background-image: linear-gradient(#122631 30%, rgba(18, 38, 49, 0) 100%);
+    background-image: -webkit-linear-gradient(#122631 30%, rgba(18, 38, 49, 0) 100%), linear-gradient(#122631 30%, rgba(18, 38, 49, 0) 100%);
     background-color: #122631;
     animation: gradientPulse-top 5s infinite ease;
+    -webkit-animation: gradientPulse-top 5s infinite ease;
 
     @media (max-width: 575px) {
        padding-top: 6rem;
@@ -652,9 +672,10 @@ hr {
 
 .base-hero-bottom {
     border-top: 4px solid;
-    background-image: linear-gradient(rgba(18, 38, 49, 0) 0%, rgb(18, 38, 49) 30%);
+    background-image: -webkit-linear-gradient(rgba(18, 38, 49, 0) 0%, rgb(18, 38, 49) 30%), linear-gradient(rgba(18, 38, 49, 0) 0%, rgb(18, 38, 49) 30%);
     background-color: #122631;
     animation: gradientPulse-top 5s infinite ease;
+    -webkit-animation: gradientPulse-top 5s infinite ease;
     margin-top: 2rem;
     padding-bottom: 0rem;
     padding-top: 0rem;
@@ -663,6 +684,8 @@ hr {
         padding-bottom: 0rem;
     }
 }
+
+/* About Page */
 
 .about {
 
@@ -736,6 +759,8 @@ hr {
         }     
     }
 }
+
+/* Orders Pages */
 
 .orders {
     margin-top: 8rem;
@@ -848,6 +873,7 @@ hr {
 
                 &:nth-child(1) {
                     transition: all 1s;
+                    -webkit-transition: all 1s;
 
                     &:hover {
                         background: lighten($background-default-color,15%);
@@ -868,6 +894,8 @@ hr {
         }
     }      
 }
+
+/*Checkout Page */
 
 .checkout {
     p {
@@ -891,6 +919,7 @@ hr {
 
     .btn-default, .btn-info, .btn-danger {
         transition: all 1s;
+        -webkit-transition: all 1s;
         border-radius: 0rem;
         border: 2px solid #fff;
         max-width: 100% !important;
@@ -983,9 +1012,12 @@ hr {
     }
 }
 
+/* Calendar Plugin z-index fix */
 .gj-calendar {
     z-index: 1060 !important;
 }
+
+/* Modal */
 
 .modal-content {
     background-color: #091319;
@@ -1021,6 +1053,8 @@ hr {
         }
     }
 }
+
+/* Footer */
 
 footer {
     color: white;
