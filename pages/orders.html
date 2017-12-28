@@ -1,0 +1,151 @@
+---
+layout   : default
+permalink: /orders
+
+# Custom Page Variables
+# ─────────────────────
+title: Orders
+
+# Nav Variables
+# ─────────────────────
+index: 2
+breadcrumb_id: 0
+nav: active
+---
+
+<div class="container orders">
+	<div class="row">
+		{% include arrow-breadcrumb.html %}
+        <div class="col-12">
+        	<h1>{{ 'Your Orders' | upcase }}</h1>
+        </div>
+        <div class="col-md-8">
+	        <table class="table">
+	        	<tbody>
+	        		<tr>
+	        			<td><b>Edit</b></td>
+	        			<td><b>Title</b></td>
+	        			<td><b>Amount of Balloons</b></td>
+	        			<td><b>Price</b></td>
+	        			<td class="text-center"><b>Total</b></td>
+	        			<td class="text-center"><b>Delete</b></td>
+	        		</tr>
+	        		<tr>
+	        			<td><a href="#" class="btn btn-secondary btn-edit">+</a></td>
+	        			<td><a href="#">Balloon Box</a></td>
+	        			<td>
+	        				<select class="form-control" name="Amount">
+	        					{% for i in (1..20) %}
+								    <option value="{{ i }}">{{ i }}</option>
+								{% endfor %}
+	        				</select></td>
+	        			<td>€ 0.00-</td>
+	        			<td class="text-center">€ 0.00-</td>
+	        			<td class="text-center"><a href="#" type="button" class="btn btn-danger btn-clear">x</a></td>
+	        		</tr>
+	        		<tr>
+	        			<td></td>
+	        			<td><a href="#" class="btn btn-primary btn-add" data-toggle="modal" data-target="#resrvModal">+</a></td>
+	        			<td></td>
+	        			<td><b>{{ 'Shipping' | upcase }}</b></td>
+	        			<td class="text-center"><b>free</b></td>
+	        			<td></td>
+	        		</tr>
+	        		<tr>
+	        			<td></td>
+	        			<td></td>
+	        			<td></td>
+	        			<td><b>Total</b></td>
+	        			<td class="text-center"><b>€ 0.00.-</b></td>
+	        			<td></td>
+	        		</tr>
+	        	</tbody>
+	        </table>        	
+        </div>
+        <div class="col-md-4">
+        	<div class="card card-bg">
+        		<div class="card-header"><b>{{ 'Shipping' | upcase }}</b></div>
+        		<div class="card-body">
+        			<div class="custom-radio">
+				        <label>
+				        	<input type="radio" aria-label="Delivery">
+				            <b>Delivery</b>
+				            <br>
+				            <p>
+				            	Free delivery when ordering more than one balloon!<br><b>In countries outside the US the shipping rates vary between € 3.95.- and € 27.95.-.</b>
+				            </p>
+				        </label>        				
+        			</div>
+        			<div class="custom-radio">
+				        <label>
+				        	<input type="radio" aria-label="On appointment">
+				            <b>On appointment</b>
+				            <br>
+				            <p>
+				            	Order times between<b>06:30</b> and <b>22:00</b>.
+				            </p>
+				        </label>        				
+        			</div>
+        			<div class="custom-radio">
+				        <label>
+				        	<input type="radio" aria-label="Get at store">
+				            <b>Get at a local business</b>
+				            <br>
+				            <p>
+				            	Get our balloons delivered to a vendor near you!
+				            </p>
+				        </label>        				
+        			</div>        			        			
+        		</div>
+        	</div>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-12 justify-content-between">
+    		<div class="card button-bar">
+    			<div class="card-body">
+    				<a href="{{ site.baseurl }}{% link pages/product.html %}" class="btn btn-default btn-lg btn-arrow-l">
+    					<span><</span>
+    					Continue Looking
+    				</a>	
+    				<a href="{{ site.baseurl }}{% link pages/checkout.html %}" class="btn btn-primary btn-lg btn-arrow-r">
+    					Continue to Checkout
+    					<span>></span>
+    				</a>
+    			</div>
+    		</div>
+    	</div>
+    </div>   
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="resrvModal" tabindex="-1" role="dialog" aria-labelledby="resrvModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resrvModalLabel">Please select your reservation dates</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+        	<div class="col-12 col-md-6 col-lg-6">
+        		Start Date: <input id="startDate" width="100%" />
+        		End Date: <input id="endDate" width="100%" />       		
+        	</div>
+        	<div class="col-12 col-md-6 col-lg-6">
+        		<p>
+        			Enter the desired start date and end date when you want to start with your balloon experience.
+        			Please note that some days, weeks, or months can be fully booked, these are subject to change when more balloons become availble or get returned.
+        		</p>
+        	</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add your order</button>
+      </div>
+    </div>
+  </div>
+</div>

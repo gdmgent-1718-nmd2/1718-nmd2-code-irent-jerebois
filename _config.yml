@@ -10,7 +10,7 @@ baseurl: /1718-nmd2-code-irent-jerebois # the subpath of your site, e.g. /blog
 
 # Custom Site variables
 # ─────────────────────
-show-style-guide: true # Show style guide in footer.
+show-style-guide: false # Show style guide in footer.
 title: Balloons in a Box
 
 # Build settings

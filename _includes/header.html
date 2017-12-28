@@ -14,11 +14,11 @@
 				{% assign nodes = site.pages | where: 'nav', 'active' | sort: 'index' %}
 				<ul class="">
 					{% for node in nodes %}
-		        	{% assign is_active = nil %}
-		        	{% if node.url contains page.url %}
-		            {% assign is_active = 'active' %}
-		        	{% endif %}        	
-		    		<li><a class="{{is_active}}" href="{{ node.url | relative_url }}">{{ node.title | upcase }}</a></li>
+		        		{% assign is_active = nil %}
+		        		{% if node.index == page.index %}
+		            		{% assign is_active = 'active' %}
+		        		{% endif %}        	
+		    			<li><a class="{{is_active}}" href="{{ node.url | relative_url }}">{{ node.title | upcase }}</a></li>
 		    		{% endfor %}
 				</ul>
 			</li>

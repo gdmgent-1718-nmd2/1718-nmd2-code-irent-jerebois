@@ -1,19 +1,21 @@
 ---
 layout   : default
-permalink: /service
+permalink: /thanks
 
 # Custom Page Variables
 # ─────────────────────
-title: Service
+title: Thank You
 
 # Nav Variables
 # ─────────────────────
-index: 4
-nav: active
+index: 2
+breadcrumb_id: 3
+nav: inactive
 ---
 
-<div class="container service">
+<div class="container orders thanks">
 	<div class="row justify-content-center">
+		{% include arrow-breadcrumb.html %}
 		{% include coming_soon.html %}
 	</div>
 </div>

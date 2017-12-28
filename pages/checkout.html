@@ -1,0 +1,160 @@
+---
+layout   : default
+permalink: /checkout
+
+# Custom Page Variables
+# ─────────────────────
+title: Checkout
+
+# Nav Variables
+# ─────────────────────
+index: 2
+breadcrumb_id: 1
+nav: inactive
+---
+
+<div class="container orders checkout">
+	<div class="row">
+		{% include arrow-breadcrumb.html %}
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+			<div class="card">
+				<div class="card-header">
+					<b>{{ 'Your Order' | upcase }}</b>
+				</div>
+				<div class="card-body">
+					<div class="edit">
+						<a href="#" class="btn btn-secondary btn-edit">+</a>
+					</div>
+					<table class="table">
+						<tbody>
+							<tr>
+								<td>
+									<img class="img-fluid" src="{{ site.baseurl }}{% link assets/images/svg/thumbnails/balloon_box_thumb.svg %}" alt="Box">
+								</td>
+								<td>
+									<a href="{{ site.baseurl }}{% link pages/product.html %}">Balloon Box</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table">
+						<tbody>
+							<tr>
+								<td><b>Total balloons (2)</b></td>
+								<td>€ 0.00.-</td>
+							</tr>
+							<tr>
+								<td><b>Shipping</b></td>
+								<td><b>Free</b></td>
+							</tr>
+							<tr>
+								<td><b>Total</b></td>
+								<td><b>€ 0.00.-</b></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
+			<div class="card">
+				<div class="card-header">
+					<b>{{ 'Order Options' | upcase }}</b>
+				</div>
+				<div class="card-body">
+					<form>
+						<p><small>{{ 'Shipping Adress' | upcase }}</small></p>
+						<table class="table options-table"> 
+							<tbody>
+								<tr>
+									<td>
+										<label>
+											<input checked="checked" type="radio" name="address" value="1">
+										</label>
+										Mr. John Doe
+										<br>
+										<p>
+											Windy Pines Blv. 1233 c1
+											<br>
+											Chicago, IL 60616
+											<br>
+											United States
+										</p>
+										<div class="col-12 form-inline justify-content-center">
+											<div class="btn-break">
+												<a class="btn btn-block btn-info" href="#"><span class="btn-edit">y</span>Edit</a>
+											</div>
+											<div class="btn-break">
+												<a class="btn btn-block btn-danger" href="#"><span class="btn-clear">x</span>Delete</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a class="btn btn-default" href="#"><span class="btn-add">+</span>Add Adress</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><small>{{ 'Contact number(s)' | upcase }}</small></p>
+						<table class="table options-table">
+							<tbody>
+								<tr>
+									<td>
+										<div class="form-inline">
+											<div class="form-group col-12 justify-content-center">
+												<label class="" for="mobile">Mobile Number</label>
+												<div class="input-stretch">
+													<input type="tel" class="form-control" name="mobile" placeholder="Mobile" value="+1 721 385 3214">
+												</div>
+											</div>
+											<div class="form-group col-12 justify-content-center">
+												<label class="" for="mobile">Home Number</label>
+												<div class="input-stretch">
+													<input type="tel" class="form-control" name="home" placeholder="Home" value="+1 321 385 3214">
+												</div>
+											</div>											
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+					<div class="comment">
+						<div class="order_collapse" role="tab" id="headingComment">
+							<p>
+								<a class="btn-arrow-d" href="#collapseComment" data-toggle="collapse" data-target="#collapseComment" aria-expanded="false" aria-controls="collapseComment">
+									<b>Comment</b>
+									<span>.</span>
+								</a>
+								<span class="span-right">(Add extra commentary)</span>
+							</p>
+						</div>
+						<div id="collapseComment" class="collapse order_collapse-field" role="tabpanel" aria-labelledby="headingComment" aria-expanded="true">
+							<div class="card card-body">
+								<textarea class="form-control" rows="5" id="comment" name="comment value="">
+								</textarea>
+  							</div>
+						</div>
+					</div>
+		    		<div class="button-bar">
+		    			<div class="card-body">
+		    				<a href="{{ site.baseurl }}{% link pages/orders.html %}" class="btn btn-default btn-lg btn-arrow-l">
+		    					<span><</span>
+		    					Back to Order
+		    				</a>	
+		    				<a href="{{ site.baseurl }}{% link pages/payment.html %}" class="btn btn-primary btn-lg btn-arrow-r">
+		    					Continue to Payment
+		    					<span>></span>
+		    				</a>
+		    			</div>
+		    		</div>					
+				</div>
+			</div>
+
+		</div>
+	</div>	
+</div>

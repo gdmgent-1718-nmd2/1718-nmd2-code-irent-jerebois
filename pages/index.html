@@ -1,6 +1,6 @@
 ---
 layout   : default
-permalink: /home
+permalink: /
 # Custom Page Variables
 # ─────────────────────
 title: Balloons in a Box
@@ -8,10 +8,11 @@ title: Balloons in a Box
 # Nav Variables
 # ─────────────────────
 nav: inactive
+index: 0
 ---
 
 <!-- Hero header -->
-<div class="jumbotron">
+<div id="hero" class="jumbotron jumbotron-fluid">
     <a href="{{ site.baseurl }}" class="logo">Logo</a>
     <div class="reserve-cta">
     	<a href="{{ site.baseurl }}{% link pages/product.html %}">{{ 'Reserve yours' | upcase }}</a>
@@ -21,7 +22,7 @@ nav: inactive
     <!-- Navigation elements -->
     <div class="nav_circle"></div>    
     <div class="nav_arrow"></div>
-    <div class="nav_stripe"></div>
+    <div class="nav_stripe stripe_hero"></div>
 </div>
 
 <!-- Line through page (WIP) -->
@@ -62,7 +63,7 @@ nav: inactive
   		</div>
 
   		<!-- MOBILE quote -->
-  		<div class="col-5">
+  		<div class="col-5 box">
   			<blockquote class="blockquote">
   				<div class="justify-content-center align-self-center quote">
   					<span>{{ 'AN experience unlike any other!' | upcase }}</span>
@@ -89,7 +90,7 @@ nav: inactive
   		</div>
 
   		<!-- MOBILE quote -->		
-  		<div class="col-5">
+  		<div class="col-5 box">
   			<blockquote class="blockquote">
   				<div class="justify-content-center align-self-center quote">
 	  				<span>{{ 'A reason to finally step outside again!' | upcase }}</span>

@@ -1,0 +1,15 @@
+- name: Your Orders
+  link: '/orders.html'
+  index: 0
+
+- name: Checkout Info
+  link: '/checkout.html'
+  index: 1
+
+- name: Payment
+  link: '/payment.html'
+  index: 2
+
+- name: Thank You!
+  link: '/thanks.html'
+  index: 3

@@ -146,3 +146,20 @@ $(document).ready(function() {
      return false;
   });
 });
+
+var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+$('#startDate').datepicker({
+    uiLibrary: 'materialdesign',
+    iconsLibrary: 'materialdesign',
+    minDate: today,
+    maxDate: function () {
+        return $('#endDate').val();
+    }
+});
+$('#endDate').datepicker({
+    uiLibrary: 'materialdesign',
+    iconsLibrary: 'materialdesign',
+    minDate: function () {
+        return $('#startDate').val();
+    }
+});
