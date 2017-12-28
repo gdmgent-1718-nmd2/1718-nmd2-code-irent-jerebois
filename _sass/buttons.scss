@@ -51,6 +51,7 @@ $btn-bg-default-color: #122631;
     &:after {
         content:"close";
         text-indent: -9999px;
+        -webkit-mask: url('#{$button-path}ic_close_black.svg') center no-repeat;
         mask: url('#{$button-path}ic_close_black.svg') center no-repeat;
         background-color: $button-svg-color;
         display: inline-block;
